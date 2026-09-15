@@ -1,7 +1,26 @@
-import Image from "next/image";
+"use client";
+
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <h1>Home</h1>
+    <main className="flex items-center justify-center h-screen bg-neutral-950 text-white">
+      <div className="flex gap-4">
+        <button
+          onClick={() => router.push("/register")}
+          className="bg-white text-black font-medium px-6 py-2 rounded-md hover:bg-gray-200"
+        >
+          Register
+        </button>
+        <button
+          onClick={() => router.push("/login")}
+          className="border border-white text-white font-medium px-6 py-2 rounded-md hover:bg-neutral-800"
+        >
+          Login
+        </button>
+      </div>
+    </main>
   );
 }
