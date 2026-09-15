@@ -28,34 +28,34 @@ export default function RegisterPage() {
   }
 
   return (
-    <main className="max-w-md h-screen flex items-center justify-center flex-col mx-auto p-6 space-y-4 text-white">
-      <h1 className="text-2xl font-bold">Register</h1>
-      {error && <p className="text-red-500">{error}</p>}
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center p-6 text-neutral-900 dark:text-white">
+      <h1 className="mb-6 text-2xl font-bold">Register</h1>
+      {error && <p className="mb-4 text-red-500">{error}</p>}
+      <form onSubmit={handleSubmit} className="w-full space-y-4">
         <input
           name="name"
           placeholder="Full Name"
           required
-          className="w-full rounded-md bg-neutral-900 border border-neutral-700 px-3 py-2"
+          className="w-full rounded-md border border-neutral-300 bg-neutral-100 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
         />
         <input
           name="email"
           type="email"
           placeholder="Email"
           required
-          className="w-full rounded-md bg-neutral-900 border border-neutral-700 px-3 py-2"
+          className="w-full rounded-md border border-neutral-300 bg-neutral-100 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
         />
         <input
           name="password"
           type="password"
           placeholder="Password"
           required
-          minLength={8} 
-          className="w-full rounded-md bg-neutral-900 border border-neutral-700 px-3 py-2"
+          minLength={8}
+          className="w-full rounded-md border border-neutral-300 bg-neutral-100 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
         />
         <button
           type="submit"
-          className="w-full bg-white text-black font-medium rounded-md px-4 py-2 hover:bg-gray-200"
+          className="w-full rounded-md bg-neutral-900 px-4 py-2 font-medium text-white hover:bg-neutral-700 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
         >
           Create Account
         </button>
